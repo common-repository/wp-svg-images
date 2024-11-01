@@ -1,0 +1,36 @@
+{
+    "landingPage": "\/wp-admin\/admin.php?page=wp-svg-images.php",
+    "preferredVersions": {
+        "php": "8.2",
+        "wp": "latest"
+    },
+    "phpExtensionBundles": [
+        "kitchen-sink"
+    ],
+    "features": {
+        "networking": true
+    },
+    "steps": [
+        {
+            "step": "installPlugin",
+            "pluginZipFile": {
+                "resource": "url",
+                "url": "https:\/\/downloads.wordpress.org\/plugin\/wp-svg-images.4.2.zip"
+            },
+            "options": {
+                "activate": true
+            }
+        },
+        {
+            "step": "login",
+            "username": "admin",
+            "password": "password"
+        },
+        {
+            "step": "setSiteOptions",
+            "options": {
+                "wpsvg_settings": "a:4:\\{s:18:\"role_administrator\";i:1;s:11:\"role_editor\";i:1;s:11:\"role_author\";i:1;s:17:\"role_shop_manager\";i:1;\\}"
+            }
+        }
+    ]
+}
